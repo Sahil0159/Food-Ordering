@@ -12,7 +12,7 @@ class BaseModel(models.Model):
         abstract = True
         
 class Product(BaseModel):
-    product_name = models.CharField(_max_length=50)
+    product_name = models.CharField(max_length=50)
     product_slug = models.SlugField(unique=True)
     product_description=models.TextField()
     product_price=models.IntegerField(default=0)
